@@ -1,18 +1,19 @@
-<?php  
-// declaração das variaveis 
-$nome = 'felipe'; 
-$cidade  = 'cerquilho';
-$ce = 428 ; 
-$curso = 'desenvolvimento de sistema' ; 
-$media = 8.5 ; 
+<?php
 
-echo 'Olá seja bem vindo ao SESI-SP <br>'; //introdução na tela 
-//aplicação das variaves 
+//Declaração das variáveis (Backend)
+$nome = 'Nathan';
+$escola = 'SESI Cerquilho';
+$CE = 428;
+$curso = 'Desenvolvimento e Sistemas';
+$media = 9.5;
+
+echo 'Olá bem vindo ao SESI-SP';
+
+//Resultado das variáveis (o que irá aparecer no Frontend)
 echo "$nome <br>";
-echo "$cidade <br>";
-echo "$ce <br>";
+echo "$escola <br>";
+echo "$CE <br>";
 echo "$curso <br>";
 echo "$media <br>";
 
-echo "olá $nome, seja bem vindo(a) ao SESI $ce da $cidade, sua media em $curso é $media" ; //aplicando a variavel de outra forma em uma introdução 
- ?>
+echo "Olá $nome, seja bem vindo ao SESI $CE de $escola, sua nota no curso: $media";
