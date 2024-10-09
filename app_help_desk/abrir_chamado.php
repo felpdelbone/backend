@@ -1,12 +1,8 @@
 <?php
-  session_start();
-  // echo $_SESSION['autenticado'];
-  if (!isset($_SESSION['autenticado']) || $_SESSION['autenticado'] != 'SIM'){
-    header ('Location: index.php?login=erro2');
-  }
+
+require_once("login.php");
 
 ?>
-
 <html>
   <head>
     <meta charset="utf-8" />
@@ -24,8 +20,26 @@
         <img src="logo.png" width="30" height="30" class="d-inline-block align-top" alt="">
         App Help Desk
       </a>
-    </nav>
+      <div style="text-align: right;">
+      <form action="logout.php" method="POST">
+          <a class="logout-button" href="index.php">Sair</a>
+      </form>
+  </div>
+  <style>
+      .logout-button {
+          background-color: red;
+          color: white;
+          border: none;
+          padding: 10px 20px;
+          cursor: pointer;
+          font-size: 16px;
+      }
+      .logout-button:hover {
+          background-color: darkred;
+      }
+  </style>
 
+    </nav>
     <div class="container">    
       <div class="row">
 
@@ -62,7 +76,7 @@
 
                     <div class="row mt-5">
                       <div class="col-6">
-                        <button class="btn btn-lg btn-warning btn-block" type="submit">Voltar</button>
+                        <a class="btn btn-lg btn-warning btn-block" href="painel.php">Voltar</a>
                       </div>
 
                       <div class="col-6">
